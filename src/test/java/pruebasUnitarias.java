@@ -103,4 +103,11 @@ public class pruebasUnitarias {
         String list = log.Imprimir(14, genialogia);
         assertEquals("FernandaAlbertoJose", list);
     }
+    
+    @Test
+    public void campoVacio(){
+        Logica log = new Logica(genialogia,50);
+        String list = log.Imprimir(50, genialogia);
+        assertEquals("", list);
+    }
 }
