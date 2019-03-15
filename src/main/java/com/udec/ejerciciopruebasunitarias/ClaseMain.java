@@ -9,13 +9,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *
+ * Calse por donde inicia el programa
  * @author David
  */
 public class ClaseMain {
-    
+    /**
+     * metodo maim el cual da el orden de ejecucion del programa
+     * @param args 
+     */
     public static void main (String [ ] args) {          
-        
          Logica lof = new Logica();
     } //Cierre del main
     

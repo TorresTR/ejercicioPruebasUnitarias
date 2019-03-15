@@ -16,11 +16,20 @@ import sun.rmi.transport.TransportConstants;
  */
 public class Logica {
 
+    /**
+     * Se crea una lista para manejar el mapa
+     */
     private Map<Integer,Persona> genialogia = new HashMap();
     public Logica() {
       
     }
 
+    /**
+     * metodo que se encargade recorrer e imprimir los mapas
+     * @param cv = es el valor de la persona que queremos buscar
+     * @param genialogia1 = la lista que tiene los datos cargados
+     * @return Retorna una lista con los datos concatenados
+     */
     public String Imprimir(Integer cv, Map genialogia1){
         String lista="";
         genialogia.putAll(genialogia1);

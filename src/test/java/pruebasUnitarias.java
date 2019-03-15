@@ -20,16 +20,24 @@ import static org.junit.Assert.*;
  * @author David
  */
 public class pruebasUnitarias {
-    
+    /**
+     * Se declara e inicializa un mapa
+     */
     static Map<Integer,Persona> genialogia = new HashMap<>();
     public pruebasUnitarias() {
     }
     
+    /**
+     * se llama el metodo insertar el cual se encargara de precargar los datos
+     */
     @BeforeClass
     public static void setUpClass() {
         insertar();
     }
     
+    /**
+     * metodo que contiene las inserciones en el mapa
+     */
     public  static void insertar(){
         Persona abueloJuan = new Persona(1, "Juan", "Torres");
         genialogia.put(1, abueloJuan);
@@ -82,6 +90,10 @@ public class pruebasUnitarias {
     public void tearDown() {
     }*/
 
+    /**
+     * Prueba unitara que se encarga de recorrer como si la busqueda fuera hecha Buscando a el abuelo
+     * en este caso seria abuelo 2 = Jose, y se recurre según orden del mapa
+     */
     @Test
     public void impresionAbuelo(){
         Logica log = new Logica();
@@ -89,6 +101,10 @@ public class pruebasUnitarias {
         assertEquals("JoseAlbertoTatianaFernandaJimmyVivianaJhonDiana", list);
     }
     
+    /**
+     * Prueba unitaria que se encarga de recorrer como si se realizara una busqueda hecha desde un padre 
+     * en este caso el padre es 3= Andres, donde muesta cual es su padre segido de sus hijos
+     */
     @Test
     public void impresionPadre(){
         Logica log = new Logica();
@@ -96,14 +112,21 @@ public class pruebasUnitarias {
         assertEquals("AndresJuanDianaPaola", list);
     }
     
-    
+    /**
+     * rueba unitaria que se encarga de recorrer como si se realizara una busqueda hecha desde un Hijo
+     * en este caso el hijo 14=Fernanda donde muestra cual es su padre seguido de cual es su abuelo
+     */
     @Test
     public void impresionHijo(){
         Logica log = new Logica();
         String list = log.Imprimir(14, genialogia);
         assertEquals("FernandaAlbertoJose", list);
     }
-    
+
+    /**
+     * Prueba unitaria que se realiza cuando se envia un dato que no esta en el mapa
+     * dicha prueba retorna  un vacio 
+     */
     @Test
     public void campoVacio(){
         Logica log = new Logica();
