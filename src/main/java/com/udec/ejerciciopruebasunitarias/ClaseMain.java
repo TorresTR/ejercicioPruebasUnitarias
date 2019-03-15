@@ -15,9 +15,8 @@ import java.util.Map;
 public class ClaseMain {
     
     public static void main (String [ ] args) {          
-         //ClasePrincipalCorrecion cr = new ClasePrincipalCorrecion();
-      Map<Integer,Persona> genialogia = new HashMap();
-         Logica lof = new Logica(genialogia,0);
+        
+         Logica lof = new Logica();
     } //Cierre del main
     
     

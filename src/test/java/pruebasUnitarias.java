@@ -84,14 +84,14 @@ public class pruebasUnitarias {
 
     @Test
     public void impresionAbuelo(){
-        Logica log = new Logica(genialogia,2);
+        Logica log = new Logica();
         String list = log.Imprimir(2, genialogia);
         assertEquals("JoseAlbertoTatianaFernandaJimmyVivianaJhonDiana", list);
     }
     
     @Test
     public void impresionPadre(){
-        Logica log = new Logica(genialogia,3);
+        Logica log = new Logica();
         String list = log.Imprimir(3, genialogia);
         assertEquals("AndresJuanDianaPaola", list);
     }
@@ -99,14 +99,14 @@ public class pruebasUnitarias {
     
     @Test
     public void impresionHijo(){
-        Logica log = new Logica(genialogia,14);
+        Logica log = new Logica();
         String list = log.Imprimir(14, genialogia);
         assertEquals("FernandaAlbertoJose", list);
     }
     
     @Test
     public void campoVacio(){
-        Logica log = new Logica(genialogia,50);
+        Logica log = new Logica();
         String list = log.Imprimir(50, genialogia);
         assertEquals("", list);
     }

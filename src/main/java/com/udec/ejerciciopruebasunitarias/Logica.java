@@ -17,8 +17,8 @@ import sun.rmi.transport.TransportConstants;
 public class Logica {
 
     private Map<Integer,Persona> genialogia = new HashMap();
-    public Logica(Map genialogia1, int cv) {
-       Imprimir(cv, genialogia1);
+    public Logica() {
+      
     }
 
     public String Imprimir(Integer cv, Map genialogia1){
